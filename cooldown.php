@@ -1,4 +1,4 @@
-#Cooldown! This should work for other stuff too.
+#Cooldown! This should work for stuff that is not commands, I think.
     public function onCommand(CommandSender $sender, Command $cmd, $lable, array $args) {
         $dataFilezz = $this->getDataFolder() . strtolower($sender->getName());
                $name = $sender->getName();
