@@ -1,0 +1,21 @@
+name: PluginName
+author: TheRoyalBlock
+api: [1.0.0, 2.0.0, 3.0.0, 3.0.0-alpha4, 3.0.0-ALPHA5, 3.0.0-ALPHA6, 3.0.0-ALPHA7, 4.0.0]
+version: 1.0
+main: TheRoyalBlock/PluginName/Main
+
+# Commands: If ur plugin has commands: Do this:
+command:
+	cmdname:
+		description: cmdnameDescription
+		usage: /cmdname
+	cmd2name:
+		description: cmd2nameDescription
+		usage: /cmd2name
+
+# Permissions 
+permissions:
+	cmdname.command:
+		default: true
+	cmd2name.command:
+		default: true
