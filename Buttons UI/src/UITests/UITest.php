@@ -23,12 +23,12 @@ class UITest extends VanillaCommand {
 
   public function execute(CommandSender $sender, $alias, array $args){
   if($sender instanceof Player){
-    $ui = new \UITests\UI\SimpleUI(1);//no words for ID, just numbers
+    $ui = new \UITests\UI\SimpleUI(25530);//no words for ID, just numbers
     $ui->addTitle(T::AQUA ."UI Testing");
     $ui->addContent(T::LIGHT_PURPLE ."You've got options!");
     $ui->addButton("Go to HimbeerCraft", -1);
     $ui->addButton("Read Some Info", -1);
-    $ui->addButton("See an image", 1, "https://server.wolvesfortress.de/MCPEGUIimages/hd/X.png");
+    $ui->addButton("See an image", 1, "https://server.wolvesfortress.de/MCPEGUIimages/hd/X.png"); //this should work...
     $ui->send($sender);
     return true;
   } else {
