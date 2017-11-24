@@ -43,7 +43,14 @@ class Main extends PluginBase implements Listener {
   if($pk instanceof ModalFormResponsePacket){
     $id = $pk->formId;
     $button = json_decode($pk->formData, true);
-  if($id === 25530){
+/* Explanation:
+It takes the id (25530) from the command file (UITests.php). Then, function 
+step2 interprets it,  and creates id 25531 in the first part. The second one is "ALTERNATE NUMBER ID LOL". These ids each redirect
+to a function. How does it know where to go? The code below this tells it. Lets say they click on Transfer to HimbeerCraft
+in id 25530. They'll be redirected to step 2, which will say "oh, clicked on button id 0? make a new UI 25531. They then 
+click a button, which redirects them to banlist, which will interpret whether they pressed "ban" or "update" aka button id 0 or 1. 
+Simple enough explanation. Much of the code is taken from a different plugin and will be confusing unless you read this. Have fun! */
+    if($id === 25530){
     $this->step2($player, $button);
 
   }
@@ -58,7 +65,7 @@ class Main extends PluginBase implements Listener {
 
   public function step2($player, $buttonid){
   if($buttonid === 0){
-    $ui = new \UITests\UI\SimpleUI(step2a);
+    $ui = new \UITests\UI\SimpleUI(25531);
     $ui->addTitle(T::AQUA ."Transfer to HimbeerCraft");
     $ui->addContent(T::LIGHT_PURPLE ."Are you sure you want to \ndo this?");
     $onlineP = $this->getServer()->getOnlinePlayers();
@@ -70,7 +77,7 @@ class Main extends PluginBase implements Listener {
   }
     $ui->send($player);
   }elseif($buttonid === 1){
-    $ui = new \UITests\UI\SimpleUI(step2b);
+    $ui = new \UITests\UI\SimpleUI(ALTERNATE NUMBER ID LOL);
     $ui->addTitle(T::AQUA ."INFO!");
     $ui->addContent(T::LIGHT_PURPLE ."Are you sure you want to \ndo this?");
     $ui->addButton("Okay ", -1);
