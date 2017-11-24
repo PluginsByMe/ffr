@@ -1,0 +1,10 @@
+name: ComplexUI
+main: UITests\Main
+version: 0.0.5
+api: 3.0.0-ALPHA9
+load: POSTWORLD
+author: TheRoyalBlock
+description: A complex UI test
+commands:
+    complexui:
+        description: 'a complex ui'
