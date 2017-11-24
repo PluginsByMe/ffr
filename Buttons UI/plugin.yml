@@ -1,0 +1,10 @@
+name: UITesting
+main: UITests\Main
+version: 1.0.0
+api: 3.0.0-ALPHA9
+load: STARTUP
+author: TheRoyalBlock
+description: TheRoyalBlocks UI Testing
+commands:
+ testUI:
+ description: Open the Test UI
