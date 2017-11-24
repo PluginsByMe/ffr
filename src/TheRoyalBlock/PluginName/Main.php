@@ -86,9 +86,9 @@ class Main extends PluginBase implements Listener{
       
 	public function onDisable(){
 		$this->getServer()->getLogger()->info(self::PREFIX . "Disabling plugin...");
-		if(isset($this->config)){
-			$this->config->save();
-		}
+			if(isset($this->config)){
+				$this->config->save();
+			}
 		$this->getServer()->getLogger()->info(self::PREFIX . "Plugin Disabled!");
 	}
 }
