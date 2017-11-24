@@ -43,7 +43,7 @@ class Main extends PluginBase implements Listener {
   if($pk instanceof ModalFormResponsePacket){
     $id = $pk->formId;
     $button = json_decode($pk->formData, true);
-  if($id === step1){
+  if($id === 25530){
     $this->step2($player, $button);
 
   }
