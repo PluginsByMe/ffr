@@ -34,7 +34,7 @@ after_script:
 - git clone --branch=$PUSH_REPO_BRANCH https://github.com/$PUSH_REPO_OWNER/$PUSH_REPO_NAME
 - cp /home/travis/build/artifacts/plugins/DevTools//$REPO_NAME* /home/travis/build/$REPO_NAME/$REPO_NAME-$TRAVIS_JOB_ID.phar
 - cp /home/travis/build/artifacts/plugins/DevTools//$REPO_NAME* /home/travis/build/$REPO_NAME/service-download/$REPO_NAME.phar
-- cd /home/travis/build/Plugswork
+- cd /home/travis/build/$REPO_NAME
 - git add $REPO_NAME-$TRAVIS_JOB_ID.phar
 - git add service-download/$REPO_NAME.phar
 - ls > list.txt
