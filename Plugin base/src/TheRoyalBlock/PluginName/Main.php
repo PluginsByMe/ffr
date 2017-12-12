@@ -1,6 +1,6 @@
 <?php
 
-namespace TheRoyalBlock\PluginName
+namespace TheRoyalBlock\PluginName;
   
 //Blocks
 use pocketmine\block\Block;
