@@ -79,7 +79,7 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getServer()->getLogger()->info(self::PREFIX . "Loading...");
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-		$this->getServer()->getPluginManager()->registerEvents(new \TheRoyalBlock\PluginName\SubDir\ListenerDir($this), $this);
+		$this->getServer()->getPluginManager()->registerEvents(new \TheRoyalBlock\PluginName\EventListener($this), $this);
 		$this->getServer()->getCommandMap()->register('cmdname', new \TheRoyalBlock\PluginName\Commands\cmdnameCommand($this));
 		$this->getServer()->getLogger()->info(self::PREFIX . "Everything has loaded!");  
 	}
