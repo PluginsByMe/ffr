@@ -2,7 +2,7 @@ name: PluginName
 author: TheRoyalBlock
 api: [1.0.0, 2.0.0, 3.0.0, 3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10, 4.0.0]
 version: 1.0
-main: TheRoyalBlock/PluginName/Main
+main: TheRoyalBlock\PluginName\Main
 
 # Commands: If your plugin has commands: Do this:
 command:
