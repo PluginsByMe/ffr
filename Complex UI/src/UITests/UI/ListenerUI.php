@@ -33,7 +33,10 @@ class ListenerUI implements Listener {
     //var_dump($data);//debuggging.
     $form = $this->plugin->ui['test'];
   if($id === $form->getId()){
-/*  $data[0] is the first field. In the case of our example here, $data[0] would be the toggle switch, $data[1] would be the slider, etc. A submit button is automatically at the end of the form.
+/*  $data[0] is the first field. In the case of our example here, $data[0] would be the toggle switch, $data[1] would be the slider, etc. 
+A submit button is automatically at the end of the form.
+The following code is from this plugin: https://github.com/AetherNetwork/WorldTpUI. $data[0] is the name of the world that they want to
+teleport to. 
 if($data[0] != '' or $data[0] != null){
   if($this->getPlugin()->getServer()->isLevelLoaded($data[0])){
   if($player->getLevel()->getName() != $data[0]){
